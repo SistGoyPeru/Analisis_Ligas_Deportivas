@@ -6,7 +6,7 @@ Created on Mon May 12 18:21:30 2025
 
 """
 
-
+import streamlit as st
 from clases import Ligas
 
 
@@ -19,7 +19,7 @@ Liga_Inglesa=Ligas("liga_inglesa.xlsm")
 
 def main():
    
-    print(Liga_española.AmbosMarcan('Real Madrid','Osasuna'))
+    st.write(Liga_española.AmbosMarcan('Real Madrid','Osasuna'))
     
 if __name__=='__main__':
     main()
