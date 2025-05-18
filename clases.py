@@ -20,6 +20,12 @@ class Ligas:
     def __init__(self,archivo):
         self.archivo=archivo
         self.df_fixture=pd.read_excel(Path(__file__).resolve().parent / self.archivo)
+
+    def equipos_local(self):
+        return self.df_fixture["Local"].unique()
+    
+    def equipos_visita(self):
+        return self.df_fixture["Visita"].unique()
         
     def PgaLG(self):
         return self.df_fixture["GF"].mean() 
